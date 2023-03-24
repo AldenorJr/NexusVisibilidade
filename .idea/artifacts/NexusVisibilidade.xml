@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NexusVisibilidade">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="NexusVisibilidade.jar">
+      <element id="module-output" name="NexusVisibilidade" />
+    </root>
+  </artifact>
+</component>

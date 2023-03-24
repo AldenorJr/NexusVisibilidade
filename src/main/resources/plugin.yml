@@ -1,0 +1,11 @@
+name: NexusVisibilidade
+version: 1.0.0
+main: br.com.nexus.visibilidade.plugin.Main
+author: Nexus
+commands:
+  saudade:
+    aliases:
+      - aparecer
+  felicidade:
+    aliases:
+      - esconder
