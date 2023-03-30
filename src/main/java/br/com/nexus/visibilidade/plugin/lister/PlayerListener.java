@@ -41,7 +41,10 @@ public class PlayerListener implements Listener {
         Player player = (Player) e.getEntity();
         if(!Cache.listPlayerOn.contains(player)) return;
         Cache.listPlayerOn.remove(player);
-        for(Player p2 : Bukkit.getOnlinePlayers()) player.showPlayer(p2);
+        for(Player p2 : Bukkit.getOnlinePlayers()) {
+            if(p2.hasPermission("Nexus.visibilidade.admin")) continue;
+            player.showPlayer(p2);
+        }
         player.sendMessage("§aAgora todos os jogadores estão visíveis.");
     }
 

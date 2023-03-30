@@ -31,7 +31,10 @@ public class CommandVisibilidadeOn implements CommandExecutor {
             return true;
         }
         Cache.listPlayerOn.remove(player);
-        for(Player p2 : Bukkit.getOnlinePlayers()) player.showPlayer(p2);
+        for(Player p2 : Bukkit.getOnlinePlayers()) {
+            if(p2.hasPermission("Nexus.visibilidade.admin")) continue;
+            player.showPlayer(p2);
+        }
         player.sendMessage("§aAgora todos os jogadores estão visíveis.");
         return false;
     }
