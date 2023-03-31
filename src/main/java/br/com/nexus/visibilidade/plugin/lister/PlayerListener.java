@@ -18,7 +18,7 @@ public class PlayerListener implements Listener {
     public void toJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
         for(Player player2 : Cache.listPlayerOn) {
-            if(player.hasPermission("Nexus.visibilidade.admin")) return;
+            if(player.hasPermission("Nexus.visibilidade.admin")) continue;
             player2.hidePlayer(player);
         }
     }
